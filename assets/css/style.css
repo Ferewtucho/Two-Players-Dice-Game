@@ -19,7 +19,7 @@ body {
         to right bottom,
         rgba(255, 255, 255, 0.699), 
         rgba(58, 56, 56, 0.4)),
-         url(/assets/img/back-ground.jpg);
+         url(../img/back-ground.jpg);
     background-size: cover;
     background-position: center;
     font-family: 'Lato', sans-serif;
@@ -28,7 +28,84 @@ body {
     color: #555;
 }
 
+/* 
+* GAME RULES
+*/
+
+.wrapper-toggle {
+    padding: 20px;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f4f3;
+    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.rules {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.rules  li {
+    padding : 10px;
+    list-style: none;
+    margin-top: 20px;
+    text-align: left;
+    letter-spacing: 1px;
+    line-break: 5px;
+    border-bottom: 1px solid #EB4D4D;
+}
+
+a {
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.3);
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-image: linear-gradient(
+        to right bottom,
+        rgb(211, 211, 211),
+        rgb(14, 22, 5)
+    );
+    color: #fff;
+    margin-right: 20px;
+}
+
+a:hover { font-weight: 600; }
+a:hover i { margin-right: 20px; }
+
+a:focus {
+    outline: none;
+}
+
+/* 
+* GAME START
+*/
+
 .wrapper {
+    display: none;
     padding: 10px;
     width: 1000px;
     border-radius: 8px;
@@ -71,7 +148,10 @@ body {
     margin-bottom: 130px;
 }
 
-.active { background-color: #dadada; }
+.active { 
+    background-color: #dadada;     
+    border-radius: 8px;
+}
 .active .player-name { font-weight: 300; }
 
 .active .player-name::after {
@@ -168,6 +248,7 @@ i {
 .btn-hold { top: 467px;}
 
 .dice {
+    border-radius: 19px;
     position: absolute;
     left: 50%;
     top: 178px;
@@ -176,7 +257,10 @@ i {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.winner { background-color: #f7f7f7; }
+.winner { 
+    background-color: #dadada;     
+    border-radius: 8px;
+ }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
 
 
