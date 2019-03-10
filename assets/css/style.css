@@ -273,7 +273,35 @@ i {
   border-radius: 19px;
   position: absolute;
   left: 50%;
-  top: 178px;
+  top: 150px;
+  transform: translateX(-50%);
+  height: 100px;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+}
+
+.final-score {
+  text-align: center;
+  position: absolute;
+  width: 160px;
+  left: 42%;
+  top: 540px;
+  text-transform: uppercase;
+  padding: .5rem 1rem;
+  font-size: 18px;
+  font-family: "lato";
+  font-weight: 300;
+  color: #555;
+}
+
+.final-score:focus {
+  outline: none;
+}
+
+.dice-2 {
+  border-radius: 19px;
+  position: absolute;
+  left: 50%;
+  top: 270px;
   transform: translateX(-50%);
   height: 100px;
   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
